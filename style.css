@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.4s;
+}
+
+.theme-toggle {
+    margin: 20px;
+    font-size: 18px;
+}
+
+.calculator {
+    background-color: lightgoldenrodyellow;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    backdrop-filter: blur(5px);
+    transition: background-color 0.4s;
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 28px;
+    text-align: right;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: lightgrey;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color:pink;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cf5f72;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.clear {
+    background-color:#cf5f72;
+}
+
+.clear:hover {
+    background-color: #c6838e;
+}
+
+.equals {
+    background-color:#cf5f72;
+    grid-column: span 2;
+}
+
+.equals:hover {
+    background-color:  #c6838e;
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: #f0f0f0;
+}
+
+body.dark .calculator {
+    background-color: #2c3e50cc;
+}
+
+body.dark #display {
+    background-color: #1c2833;
+    color: #f0f0f0;
+}
+
+body.dark button {
+    background-color: #34495e;
+    color: #f0f0f0;
+}
+
+body.dark button:hover {
+    background-color: #2c3e50;
+}
+
+body.dark .clear {
+    background-color: #e74c3c;
+}
+
+body.dark .equals {
+    background-color: #27ae60;
+}
